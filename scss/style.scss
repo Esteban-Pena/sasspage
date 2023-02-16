@@ -1,0 +1,82 @@
+@use "sass:color";
+@import url('https://fonts.googleapis.com/css2?family=Proza+Libre&display=swap');
+
+$fontstack: "Gotu", sans-serif;
+$fontsize: 1em;
+$primary: pink;
+$primary_dark: color.scale($primary, $lightness: -30%);
+
+* {
+    line-height: normal;
+    box-sizing: border-box;
+    margin: 0;
+    background-color: black;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
+nav {
+    color: $primary_dark;
+    font-family: $fontstack;
+    font-size: $fontsize;
+    padding: 1rem;
+    text-align: center;
+    ul {
+        background-color: $primary;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        li {
+            padding: 1rem;
+            width: 100%;
+            border: solid 0.25rem $primary_dark;
+            &:nth-child(2) {
+                border-left: none;
+                border-right: none;
+            }
+        }
+        a {
+            color: $primary_dark;
+            text-decoration: none;
+            &:hover {
+                color: white;
+            }
+        }
+    }
+}
+
+h1 {
+    font-family: $fontstack;
+    font-size: 2rem;
+    margin: 1rem;
+    color: $primary_dark;
+    text-align: left;
+}
+
+#container {
+    color: $primary_dark;
+    font-family: $fontstack;
+    font-size: $fontsize;
+    padding: 1rem;
+    text-align: center;
+    ul {
+        background-color: $primary;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        li {
+            padding: 1rem;
+            width: 100%;
+            border: solid 0.25rem $primary_dark;
+            &:nth-child(2) {
+                border-left: none;
+                border-right: none;
+            }
+        }
+    }
+    }
